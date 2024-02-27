@@ -8,6 +8,7 @@ import { JwtService } from '@nestjs/jwt'
 import { UserService } from '../user/user.service'
 import { AuthDto } from './dto/auth.dto'
 import { verify } from 'argon2'
+import { Response } from 'express'
 
 @Injectable()
 export class AuthService {
@@ -15,6 +16,9 @@ export class AuthService {
 		private jwt: JwtService,
 		private userService: UserService
 	) {}
+
+	EXPIRE_DAY_REFRESH_TOKEN = 1
+	REFRESH_TOKEN_NAME = 'refreshToken'
 
 	async login(dto: AuthDto) {
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -53,5 +57,48 @@ export class AuthService {
 		if (!isValid) throw new UnauthorizedException('Invalid password')
 
 		return user
+	}
+
+	addRefreshTokenToResponse(res: Response, refreshToken: string) {
+		const expiresIn = new Date()
+
+		expiresIn.setDate(expiresIn.getDate() + this.EXPIRE_DAY_REFRESH_TOKEN)
+
+		res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {
+			httpOnly: true,
+			//todo переделать далее чтобы можно было обращаться с другого домена
+			domain: 'localhost',
+			expires: expiresIn,
+			secure: true,
+			//todo в продакшен сделать lax
+			sameSite: 'none'
+		})
+	}
+
+	removeRefreshTokenFromResponse(res: Response) {
+		res.cookie(this.REFRESH_TOKEN_NAME, '', {
+			httpOnly: true,
+			//todo переделать далее чтобы можно было обращаться с другого домена
+			domain: 'localhost',
+			expires: new Date(0),
+			secure: true,
+			//todo в продакшен сделать lax
+			sameSite: 'none'
+		})
+	}
+
+	async getNewTokens(refreshToken: string) {
+		const result = await this.jwt.verifyAsync(refreshToken)
+
+		if (!result) throw new UnauthorizedException('Invalid refresh token')
+
+		const { password, ...user } = await this.userService.getById(result.id)
+
+		const tokens = this.issueTokens(user.id)
+
+		return {
+			user,
+			...tokens
+		}
 	}
 }
