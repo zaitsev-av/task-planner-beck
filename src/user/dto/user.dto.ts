@@ -33,7 +33,6 @@ export class UserDto extends PomodoroSettingsDto {
 
 	@IsOptional()
 	@IsString()
-	@IsEmail()
 	name: string
 
 	@IsOptional()

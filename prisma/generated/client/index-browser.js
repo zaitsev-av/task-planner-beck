@@ -125,7 +125,7 @@ exports.Prisma.TaskScalarFieldEnum = {
   updatedAd: 'updatedAd',
   name: 'name',
   priority: 'priority',
-  isComploted: 'isComploted',
+  isCompleted: 'isCompleted',
   userId: 'userId'
 };
 
