@@ -41,7 +41,7 @@ export class UserService {
 	async update(id: string, dto: UserDto) {
 		let data = dto
 		if (dto.password) {
-			data = {...dto, password: await hash(dto.password)}
+			data = { ...dto, password: await hash(dto.password) }
 		}
 
 		return this.prisma.user.update({
@@ -57,9 +57,9 @@ export class UserService {
 		})
 	}
 
-	async getProfile (id: string) {
+	async getProfile(id: string) {
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-		const {password, ...user} = await this.getById(id)
+		const { password, ...user } = await this.getById(id)
 		return {
 			user
 		}

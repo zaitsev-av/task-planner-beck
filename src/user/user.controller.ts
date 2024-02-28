@@ -1,4 +1,12 @@
-import { Body, Controller, Get, HttpCode, Put, UsePipes, ValidationPipe } from '@nestjs/common'
+import {
+	Body,
+	Controller,
+	Get,
+	HttpCode,
+	Put,
+	UsePipes,
+	ValidationPipe
+} from '@nestjs/common'
 import { UserService } from './user.service'
 import { Auth } from '../auth/decorators/auth.decorator'
 import { CurrentUser } from '../auth/decorators/user.decorator'
@@ -10,7 +18,7 @@ export class UserController {
 
 	@Get()
 	@Auth()
-	async profile (@CurrentUser('id') id: string) {
+	async profile(@CurrentUser('id') id: string) {
 		return this.userService.getProfile(id)
 	}
 
