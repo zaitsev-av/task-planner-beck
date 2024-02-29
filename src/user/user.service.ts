@@ -64,4 +64,15 @@ export class UserService {
 			user
 		}
 	}
+
+	async intervalCount(id: string) {
+		return this.prisma.user.findUnique({
+			where: {
+				id
+			},
+			select: {
+				intervalsCount: true
+			}
+		})
+	}
 }

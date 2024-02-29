@@ -4311,7 +4311,7 @@ export namespace Prisma {
     id: string | null
     createdAd: Date | null
     updatedAd: Date | null
-    isComploted: boolean | null
+    isCompleted: boolean | null
     userId: string | null
   }
 
@@ -4319,7 +4319,7 @@ export namespace Prisma {
     id: string | null
     createdAd: Date | null
     updatedAd: Date | null
-    isComploted: boolean | null
+    isCompleted: boolean | null
     userId: string | null
   }
 
@@ -4327,7 +4327,7 @@ export namespace Prisma {
     id: number
     createdAd: number
     updatedAd: number
-    isComploted: number
+    isCompleted: number
     userId: number
     _all: number
   }
@@ -4337,7 +4337,7 @@ export namespace Prisma {
     id?: true
     createdAd?: true
     updatedAd?: true
-    isComploted?: true
+    isCompleted?: true
     userId?: true
   }
 
@@ -4345,7 +4345,7 @@ export namespace Prisma {
     id?: true
     createdAd?: true
     updatedAd?: true
-    isComploted?: true
+    isCompleted?: true
     userId?: true
   }
 
@@ -4353,7 +4353,7 @@ export namespace Prisma {
     id?: true
     createdAd?: true
     updatedAd?: true
-    isComploted?: true
+    isCompleted?: true
     userId?: true
     _all?: true
   }
@@ -4434,7 +4434,7 @@ export namespace Prisma {
     id: string
     createdAd: Date
     updatedAd: Date
-    isComploted: boolean
+    isCompleted: boolean
     userId: string
     _count: PomodoroSessionCountAggregateOutputType | null
     _min: PomodoroSessionMinAggregateOutputType | null
@@ -4459,7 +4459,7 @@ export namespace Prisma {
     id?: boolean
     createdAd?: boolean
     updatedAd?: boolean
-    isComploted?: boolean
+    isCompleted?: boolean
     userId?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
     rounds?: boolean | PomodoroSession$roundsArgs<ExtArgs>
@@ -4470,7 +4470,7 @@ export namespace Prisma {
     id?: boolean
     createdAd?: boolean
     updatedAd?: boolean
-    isComploted?: boolean
+    isCompleted?: boolean
     userId?: boolean
   }
 
@@ -4491,7 +4491,7 @@ export namespace Prisma {
       id: string
       createdAd: Date
       updatedAd: Date
-      isComploted: boolean
+      isCompleted: boolean
       userId: string
     }, ExtArgs["result"]["pomodoroSession"]>
     composites: {}
@@ -4893,7 +4893,7 @@ export namespace Prisma {
     readonly id: FieldRef<"PomodoroSession", 'String'>
     readonly createdAd: FieldRef<"PomodoroSession", 'DateTime'>
     readonly updatedAd: FieldRef<"PomodoroSession", 'DateTime'>
-    readonly isComploted: FieldRef<"PomodoroSession", 'Boolean'>
+    readonly isCompleted: FieldRef<"PomodoroSession", 'Boolean'>
     readonly userId: FieldRef<"PomodoroSession", 'String'>
   }
     
@@ -5268,7 +5268,7 @@ export namespace Prisma {
     createdAd: Date | null
     updatedAd: Date | null
     totalSeconds: number | null
-    isComploted: boolean | null
+    isCompleted: boolean | null
     pomodoroSessionId: string | null
   }
 
@@ -5277,7 +5277,7 @@ export namespace Prisma {
     createdAd: Date | null
     updatedAd: Date | null
     totalSeconds: number | null
-    isComploted: boolean | null
+    isCompleted: boolean | null
     pomodoroSessionId: string | null
   }
 
@@ -5286,7 +5286,7 @@ export namespace Prisma {
     createdAd: number
     updatedAd: number
     totalSeconds: number
-    isComploted: number
+    isCompleted: number
     pomodoroSessionId: number
     _all: number
   }
@@ -5305,7 +5305,7 @@ export namespace Prisma {
     createdAd?: true
     updatedAd?: true
     totalSeconds?: true
-    isComploted?: true
+    isCompleted?: true
     pomodoroSessionId?: true
   }
 
@@ -5314,7 +5314,7 @@ export namespace Prisma {
     createdAd?: true
     updatedAd?: true
     totalSeconds?: true
-    isComploted?: true
+    isCompleted?: true
     pomodoroSessionId?: true
   }
 
@@ -5323,7 +5323,7 @@ export namespace Prisma {
     createdAd?: true
     updatedAd?: true
     totalSeconds?: true
-    isComploted?: true
+    isCompleted?: true
     pomodoroSessionId?: true
     _all?: true
   }
@@ -5419,7 +5419,7 @@ export namespace Prisma {
     createdAd: Date
     updatedAd: Date
     totalSeconds: number
-    isComploted: boolean
+    isCompleted: boolean
     pomodoroSessionId: string
     _count: PomodoroRoundCountAggregateOutputType | null
     _avg: PomodoroRoundAvgAggregateOutputType | null
@@ -5447,7 +5447,7 @@ export namespace Prisma {
     createdAd?: boolean
     updatedAd?: boolean
     totalSeconds?: boolean
-    isComploted?: boolean
+    isCompleted?: boolean
     pomodoroSessionId?: boolean
     pomodoroSession?: boolean | PomodoroSessionDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["pomodoroRound"]>
@@ -5457,7 +5457,7 @@ export namespace Prisma {
     createdAd?: boolean
     updatedAd?: boolean
     totalSeconds?: boolean
-    isComploted?: boolean
+    isCompleted?: boolean
     pomodoroSessionId?: boolean
   }
 
@@ -5476,7 +5476,7 @@ export namespace Prisma {
       createdAd: Date
       updatedAd: Date
       totalSeconds: number
-      isComploted: boolean
+      isCompleted: boolean
       pomodoroSessionId: string
     }, ExtArgs["result"]["pomodoroRound"]>
     composites: {}
@@ -5877,7 +5877,7 @@ export namespace Prisma {
     readonly createdAd: FieldRef<"PomodoroRound", 'DateTime'>
     readonly updatedAd: FieldRef<"PomodoroRound", 'DateTime'>
     readonly totalSeconds: FieldRef<"PomodoroRound", 'Int'>
-    readonly isComploted: FieldRef<"PomodoroRound", 'Boolean'>
+    readonly isCompleted: FieldRef<"PomodoroRound", 'Boolean'>
     readonly pomodoroSessionId: FieldRef<"PomodoroRound", 'String'>
   }
     
@@ -6266,7 +6266,7 @@ export namespace Prisma {
     id: 'id',
     createdAd: 'createdAd',
     updatedAd: 'updatedAd',
-    isComploted: 'isComploted',
+    isCompleted: 'isCompleted',
     userId: 'userId'
   };
 
@@ -6278,7 +6278,7 @@ export namespace Prisma {
     createdAd: 'createdAd',
     updatedAd: 'updatedAd',
     totalSeconds: 'totalSeconds',
-    isComploted: 'isComploted',
+    isCompleted: 'isCompleted',
     pomodoroSessionId: 'pomodoroSessionId'
   };
 
@@ -6621,7 +6621,7 @@ export namespace Prisma {
     id?: StringFilter<"PomodoroSession"> | string
     createdAd?: DateTimeFilter<"PomodoroSession"> | Date | string
     updatedAd?: DateTimeFilter<"PomodoroSession"> | Date | string
-    isComploted?: BoolFilter<"PomodoroSession"> | boolean
+    isCompleted?: BoolFilter<"PomodoroSession"> | boolean
     userId?: StringFilter<"PomodoroSession"> | string
     user?: XOR<UserRelationFilter, UserWhereInput>
     rounds?: PomodoroRoundListRelationFilter
@@ -6631,7 +6631,7 @@ export namespace Prisma {
     id?: SortOrder
     createdAd?: SortOrder
     updatedAd?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     userId?: SortOrder
     user?: UserOrderByWithRelationInput
     rounds?: PomodoroRoundOrderByRelationAggregateInput
@@ -6644,7 +6644,7 @@ export namespace Prisma {
     NOT?: PomodoroSessionWhereInput | PomodoroSessionWhereInput[]
     createdAd?: DateTimeFilter<"PomodoroSession"> | Date | string
     updatedAd?: DateTimeFilter<"PomodoroSession"> | Date | string
-    isComploted?: BoolFilter<"PomodoroSession"> | boolean
+    isCompleted?: BoolFilter<"PomodoroSession"> | boolean
     userId?: StringFilter<"PomodoroSession"> | string
     user?: XOR<UserRelationFilter, UserWhereInput>
     rounds?: PomodoroRoundListRelationFilter
@@ -6654,7 +6654,7 @@ export namespace Prisma {
     id?: SortOrder
     createdAd?: SortOrder
     updatedAd?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     userId?: SortOrder
     _count?: PomodoroSessionCountOrderByAggregateInput
     _max?: PomodoroSessionMaxOrderByAggregateInput
@@ -6668,7 +6668,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"PomodoroSession"> | string
     createdAd?: DateTimeWithAggregatesFilter<"PomodoroSession"> | Date | string
     updatedAd?: DateTimeWithAggregatesFilter<"PomodoroSession"> | Date | string
-    isComploted?: BoolWithAggregatesFilter<"PomodoroSession"> | boolean
+    isCompleted?: BoolWithAggregatesFilter<"PomodoroSession"> | boolean
     userId?: StringWithAggregatesFilter<"PomodoroSession"> | string
   }
 
@@ -6680,7 +6680,7 @@ export namespace Prisma {
     createdAd?: DateTimeFilter<"PomodoroRound"> | Date | string
     updatedAd?: DateTimeFilter<"PomodoroRound"> | Date | string
     totalSeconds?: IntFilter<"PomodoroRound"> | number
-    isComploted?: BoolFilter<"PomodoroRound"> | boolean
+    isCompleted?: BoolFilter<"PomodoroRound"> | boolean
     pomodoroSessionId?: StringFilter<"PomodoroRound"> | string
     pomodoroSession?: XOR<PomodoroSessionRelationFilter, PomodoroSessionWhereInput>
   }
@@ -6690,7 +6690,7 @@ export namespace Prisma {
     createdAd?: SortOrder
     updatedAd?: SortOrder
     totalSeconds?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     pomodoroSessionId?: SortOrder
     pomodoroSession?: PomodoroSessionOrderByWithRelationInput
   }
@@ -6703,7 +6703,7 @@ export namespace Prisma {
     createdAd?: DateTimeFilter<"PomodoroRound"> | Date | string
     updatedAd?: DateTimeFilter<"PomodoroRound"> | Date | string
     totalSeconds?: IntFilter<"PomodoroRound"> | number
-    isComploted?: BoolFilter<"PomodoroRound"> | boolean
+    isCompleted?: BoolFilter<"PomodoroRound"> | boolean
     pomodoroSessionId?: StringFilter<"PomodoroRound"> | string
     pomodoroSession?: XOR<PomodoroSessionRelationFilter, PomodoroSessionWhereInput>
   }, "id">
@@ -6713,7 +6713,7 @@ export namespace Prisma {
     createdAd?: SortOrder
     updatedAd?: SortOrder
     totalSeconds?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     pomodoroSessionId?: SortOrder
     _count?: PomodoroRoundCountOrderByAggregateInput
     _avg?: PomodoroRoundAvgOrderByAggregateInput
@@ -6730,7 +6730,7 @@ export namespace Prisma {
     createdAd?: DateTimeWithAggregatesFilter<"PomodoroRound"> | Date | string
     updatedAd?: DateTimeWithAggregatesFilter<"PomodoroRound"> | Date | string
     totalSeconds?: IntWithAggregatesFilter<"PomodoroRound"> | number
-    isComploted?: BoolWithAggregatesFilter<"PomodoroRound"> | boolean
+    isCompleted?: BoolWithAggregatesFilter<"PomodoroRound"> | boolean
     pomodoroSessionId?: StringWithAggregatesFilter<"PomodoroRound"> | string
   }
 
@@ -6979,7 +6979,7 @@ export namespace Prisma {
     id?: string
     createdAd?: Date | string
     updatedAd?: Date | string
-    isComploted?: boolean
+    isCompleted?: boolean
     user: UserCreateNestedOneWithoutPomodoroSessionsInput
     rounds?: PomodoroRoundCreateNestedManyWithoutPomodoroSessionInput
   }
@@ -6988,7 +6988,7 @@ export namespace Prisma {
     id?: string
     createdAd?: Date | string
     updatedAd?: Date | string
-    isComploted?: boolean
+    isCompleted?: boolean
     userId: string
     rounds?: PomodoroRoundUncheckedCreateNestedManyWithoutPomodoroSessionInput
   }
@@ -6997,7 +6997,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     user?: UserUpdateOneRequiredWithoutPomodoroSessionsNestedInput
     rounds?: PomodoroRoundUpdateManyWithoutPomodoroSessionNestedInput
   }
@@ -7006,7 +7006,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     userId?: StringFieldUpdateOperationsInput | string
     rounds?: PomodoroRoundUncheckedUpdateManyWithoutPomodoroSessionNestedInput
   }
@@ -7015,7 +7015,7 @@ export namespace Prisma {
     id?: string
     createdAd?: Date | string
     updatedAd?: Date | string
-    isComploted?: boolean
+    isCompleted?: boolean
     userId: string
   }
 
@@ -7023,14 +7023,14 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type PomodoroSessionUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     userId?: StringFieldUpdateOperationsInput | string
   }
 
@@ -7039,7 +7039,7 @@ export namespace Prisma {
     createdAd?: Date | string
     updatedAd?: Date | string
     totalSeconds: number
-    isComploted?: boolean
+    isCompleted?: boolean
     pomodoroSession: PomodoroSessionCreateNestedOneWithoutRoundsInput
   }
 
@@ -7048,7 +7048,7 @@ export namespace Prisma {
     createdAd?: Date | string
     updatedAd?: Date | string
     totalSeconds: number
-    isComploted?: boolean
+    isCompleted?: boolean
     pomodoroSessionId: string
   }
 
@@ -7057,7 +7057,7 @@ export namespace Prisma {
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
     totalSeconds?: IntFieldUpdateOperationsInput | number
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     pomodoroSession?: PomodoroSessionUpdateOneRequiredWithoutRoundsNestedInput
   }
 
@@ -7066,7 +7066,7 @@ export namespace Prisma {
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
     totalSeconds?: IntFieldUpdateOperationsInput | number
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     pomodoroSessionId?: StringFieldUpdateOperationsInput | string
   }
 
@@ -7075,7 +7075,7 @@ export namespace Prisma {
     createdAd?: Date | string
     updatedAd?: Date | string
     totalSeconds: number
-    isComploted?: boolean
+    isCompleted?: boolean
     pomodoroSessionId: string
   }
 
@@ -7084,7 +7084,7 @@ export namespace Prisma {
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
     totalSeconds?: IntFieldUpdateOperationsInput | number
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type PomodoroRoundUncheckedUpdateManyInput = {
@@ -7092,7 +7092,7 @@ export namespace Prisma {
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
     totalSeconds?: IntFieldUpdateOperationsInput | number
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     pomodoroSessionId?: StringFieldUpdateOperationsInput | string
   }
 
@@ -7446,7 +7446,7 @@ export namespace Prisma {
     id?: SortOrder
     createdAd?: SortOrder
     updatedAd?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     userId?: SortOrder
   }
 
@@ -7454,7 +7454,7 @@ export namespace Prisma {
     id?: SortOrder
     createdAd?: SortOrder
     updatedAd?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     userId?: SortOrder
   }
 
@@ -7462,7 +7462,7 @@ export namespace Prisma {
     id?: SortOrder
     createdAd?: SortOrder
     updatedAd?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     userId?: SortOrder
   }
 
@@ -7476,7 +7476,7 @@ export namespace Prisma {
     createdAd?: SortOrder
     updatedAd?: SortOrder
     totalSeconds?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     pomodoroSessionId?: SortOrder
   }
 
@@ -7489,7 +7489,7 @@ export namespace Prisma {
     createdAd?: SortOrder
     updatedAd?: SortOrder
     totalSeconds?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     pomodoroSessionId?: SortOrder
   }
 
@@ -7498,7 +7498,7 @@ export namespace Prisma {
     createdAd?: SortOrder
     updatedAd?: SortOrder
     totalSeconds?: SortOrder
-    isComploted?: SortOrder
+    isCompleted?: SortOrder
     pomodoroSessionId?: SortOrder
   }
 
@@ -8021,7 +8021,7 @@ export namespace Prisma {
     id?: string
     createdAd?: Date | string
     updatedAd?: Date | string
-    isComploted?: boolean
+    isCompleted?: boolean
     rounds?: PomodoroRoundCreateNestedManyWithoutPomodoroSessionInput
   }
 
@@ -8029,7 +8029,7 @@ export namespace Prisma {
     id?: string
     createdAd?: Date | string
     updatedAd?: Date | string
-    isComploted?: boolean
+    isCompleted?: boolean
     rounds?: PomodoroRoundUncheckedCreateNestedManyWithoutPomodoroSessionInput
   }
 
@@ -8125,7 +8125,7 @@ export namespace Prisma {
     id?: StringFilter<"PomodoroSession"> | string
     createdAd?: DateTimeFilter<"PomodoroSession"> | Date | string
     updatedAd?: DateTimeFilter<"PomodoroSession"> | Date | string
-    isComploted?: BoolFilter<"PomodoroSession"> | boolean
+    isCompleted?: BoolFilter<"PomodoroSession"> | boolean
     userId?: StringFilter<"PomodoroSession"> | string
   }
 
@@ -8311,7 +8311,7 @@ export namespace Prisma {
     createdAd?: Date | string
     updatedAd?: Date | string
     totalSeconds: number
-    isComploted?: boolean
+    isCompleted?: boolean
   }
 
   export type PomodoroRoundUncheckedCreateWithoutPomodoroSessionInput = {
@@ -8319,7 +8319,7 @@ export namespace Prisma {
     createdAd?: Date | string
     updatedAd?: Date | string
     totalSeconds: number
-    isComploted?: boolean
+    isCompleted?: boolean
   }
 
   export type PomodoroRoundCreateOrConnectWithoutPomodoroSessionInput = {
@@ -8395,7 +8395,7 @@ export namespace Prisma {
     createdAd?: DateTimeFilter<"PomodoroRound"> | Date | string
     updatedAd?: DateTimeFilter<"PomodoroRound"> | Date | string
     totalSeconds?: IntFilter<"PomodoroRound"> | number
-    isComploted?: BoolFilter<"PomodoroRound"> | boolean
+    isCompleted?: BoolFilter<"PomodoroRound"> | boolean
     pomodoroSessionId?: StringFilter<"PomodoroRound"> | string
   }
 
@@ -8403,7 +8403,7 @@ export namespace Prisma {
     id?: string
     createdAd?: Date | string
     updatedAd?: Date | string
-    isComploted?: boolean
+    isCompleted?: boolean
     user: UserCreateNestedOneWithoutPomodoroSessionsInput
   }
 
@@ -8411,7 +8411,7 @@ export namespace Prisma {
     id?: string
     createdAd?: Date | string
     updatedAd?: Date | string
-    isComploted?: boolean
+    isCompleted?: boolean
     userId: string
   }
 
@@ -8435,7 +8435,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     user?: UserUpdateOneRequiredWithoutPomodoroSessionsNestedInput
   }
 
@@ -8443,7 +8443,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     userId?: StringFieldUpdateOperationsInput | string
   }
 
@@ -8470,7 +8470,7 @@ export namespace Prisma {
     id?: string
     createdAd?: Date | string
     updatedAd?: Date | string
-    isComploted?: boolean
+    isCompleted?: boolean
   }
 
   export type TaskUpdateWithoutUserInput = {
@@ -8534,7 +8534,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     rounds?: PomodoroRoundUpdateManyWithoutPomodoroSessionNestedInput
   }
 
@@ -8542,7 +8542,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     rounds?: PomodoroRoundUncheckedUpdateManyWithoutPomodoroSessionNestedInput
   }
 
@@ -8550,7 +8550,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type PomodoroRoundCreateManyPomodoroSessionInput = {
@@ -8558,7 +8558,7 @@ export namespace Prisma {
     createdAd?: Date | string
     updatedAd?: Date | string
     totalSeconds: number
-    isComploted?: boolean
+    isCompleted?: boolean
   }
 
   export type PomodoroRoundUpdateWithoutPomodoroSessionInput = {
@@ -8566,7 +8566,7 @@ export namespace Prisma {
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
     totalSeconds?: IntFieldUpdateOperationsInput | number
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type PomodoroRoundUncheckedUpdateWithoutPomodoroSessionInput = {
@@ -8574,7 +8574,7 @@ export namespace Prisma {
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
     totalSeconds?: IntFieldUpdateOperationsInput | number
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type PomodoroRoundUncheckedUpdateManyWithoutPomodoroSessionInput = {
@@ -8582,7 +8582,7 @@ export namespace Prisma {
     createdAd?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAd?: DateTimeFieldUpdateOperationsInput | Date | string
     totalSeconds?: IntFieldUpdateOperationsInput | number
-    isComploted?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
   }
 
 

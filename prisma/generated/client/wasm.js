@@ -144,7 +144,7 @@ exports.Prisma.PomodoroSessionScalarFieldEnum = {
   id: 'id',
   createdAd: 'createdAd',
   updatedAd: 'updatedAd',
-  isComploted: 'isComploted',
+  isCompleted: 'isCompleted',
   userId: 'userId'
 };
 
@@ -153,7 +153,7 @@ exports.Prisma.PomodoroRoundScalarFieldEnum = {
   createdAd: 'createdAd',
   updatedAd: 'updatedAd',
   totalSeconds: 'totalSeconds',
-  isComploted: 'isComploted',
+  isCompleted: 'isCompleted',
   pomodoroSessionId: 'pomodoroSessionId'
 };
 
