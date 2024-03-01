@@ -126,4 +126,25 @@ describe('AuthController', () => {
 		)
 		expect(service.register).toHaveBeenCalledWith(dto)
 	})
+
+	describe('logout', () => {
+		it('should return true if user logout', async () => {
+			// Create a mock response object
+			const res = {
+				cookie: jest.fn(),
+				value: true
+			}
+
+			jest
+				.spyOn(service, 'removeRefreshTokenFromResponse')
+				.mockResolvedValue(res as never)
+
+			const result = await controller.logout(res as never)
+
+			expect(result).toBeTruthy()
+			expect(service.removeRefreshTokenFromResponse).toHaveBeenCalledWith(
+				res as never
+			)
+		})
+	})
 })
