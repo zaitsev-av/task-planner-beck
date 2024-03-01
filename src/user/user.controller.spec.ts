@@ -2,15 +2,17 @@ import { Test, TestingModule } from '@nestjs/testing'
 import { UserController } from './user.controller'
 import { UserService } from './user.service'
 import { UserDto } from './dto/user.dto'
+import { PrismaService } from '../prisma.service'
 
 describe('UserController', () => {
 	let controller: UserController
 	let service: UserService
+	const id = 'user-id'
 
 	beforeEach(async () => {
 		const module: TestingModule = await Test.createTestingModule({
 			controllers: [UserController],
-			providers: [UserService]
+			providers: [UserService, PrismaService]
 		}).compile()
 
 		controller = module.get<UserController>(UserController)
@@ -19,8 +21,6 @@ describe('UserController', () => {
 
 	describe('profile', () => {
 		it('should return the user profile', async () => {
-			const id = 'user-id'
-			// const profile = { id, name: 'John Doe' }
 			const profile = {
 				user: {
 					id: 'clt45nb1h0000zzp3qklt5go1',
@@ -53,7 +53,6 @@ describe('UserController', () => {
 		})
 
 		it('should throw an error if user is not authenticated', async () => {
-			const id = 'user-id'
 			jest
 				.spyOn(service, 'getProfile')
 				.mockRejectedValue(new Error('Unauthorized'))
@@ -65,13 +64,12 @@ describe('UserController', () => {
 
 	describe('updateProfile', () => {
 		it('should update the user profile', async () => {
-			const id = 'user-id'
 			const dto: UserDto = {
-				name: 'Name',
-				email: '1234@qwe.com',
-				password: '12313423fs'
+				name: 'Гена',
+				email: 'example@example.com'
 			}
-			const updatedProfile = { id, name: 'John Doe', email: 'john@example.com' }
+
+			const updatedProfile = { id, ...dto }
 			jest.spyOn(service, 'update').mockResolvedValue(updatedProfile)
 
 			const result = await controller.updateProfile(id, dto)
@@ -81,12 +79,11 @@ describe('UserController', () => {
 		})
 
 		it('should throw an error if user is not authenticated', async () => {
-			const id = 'user-id'
 			const dto: UserDto = {
-				name: 'Name',
-				email: '1234@qwe.com',
-				password: '12313423fs'
+				name: 'Гена',
+				email: 'example@example.com'
 			}
+
 			jest.spyOn(service, 'update').mockRejectedValue(new Error('Unauthorized'))
 
 			await expect(controller.updateProfile(id, dto)).rejects.toThrowError(
