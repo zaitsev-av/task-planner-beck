@@ -9,6 +9,30 @@ describe('UserController', () => {
 	let service: UserService
 	const id = 'user-id'
 
+	const profile = {
+		user: {
+			id: 'clt45nb1h0000zzp3qklt5go1',
+			createdAd: new Date(),
+			updatedAd: new Date(),
+			email: 'qwer123@asd.com',
+			name: 'qwer123',
+			workInterval: 45,
+			breaklInterval: 15,
+			intervalsCount: 5,
+			tasks: [
+				{
+					id: 'clt5omftk0001lp0i70yof58l',
+					createdAd: new Date(),
+					updatedAd: new Date(),
+					name: 'Hello beck',
+					priority: null,
+					isCompleted: false,
+					userId: 'clt45nb1h0000zzp3qklt5go1'
+				}
+			]
+		}
+	}
+
 	beforeEach(async () => {
 		const module: TestingModule = await Test.createTestingModule({
 			controllers: [UserController],
@@ -21,29 +45,6 @@ describe('UserController', () => {
 
 	describe('profile', () => {
 		it('should return the user profile', async () => {
-			const profile = {
-				user: {
-					id: 'clt45nb1h0000zzp3qklt5go1',
-					createdAd: new Date(),
-					updatedAd: new Date(),
-					email: 'qwer123@asd.com',
-					name: 'qwer123',
-					workInterval: 45,
-					breaklInterval: 15,
-					intervalsCount: 5,
-					tasks: [
-						{
-							id: 'clt5omftk0001lp0i70yof58l',
-							createdAd: new Date(),
-							updatedAd: new Date(),
-							name: 'Hello beck',
-							priority: null,
-							isCompleted: false,
-							userId: 'clt45nb1h0000zzp3qklt5go1'
-						}
-					]
-				}
-			}
 			jest.spyOn(service, 'getProfile').mockResolvedValue(profile)
 
 			const result = await controller.profile(id)
